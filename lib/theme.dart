@@ -43,17 +43,19 @@ class AppTheme {
   // Text Style - light
   // *****************
   static const TextStyle _lightHeadingText = TextStyle(
-      color: _lightTextColorPrimary,
-      fontFamily: "Rubik",
-      fontSize: 20,
-      fontWeight: FontWeight.bold);
+    color: _lightTextColorPrimary,
+    fontFamily: "Rubik",
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
 
   static const TextStyle _lightBodyText = TextStyle(
-      color: _lightTextColorPrimary,
-      fontFamily: "Rubik",
-      fontStyle: FontStyle.italic,
-      fontWeight: FontWeight.bold,
-      fontSize: 16);
+    color: _lightTextColorPrimary,
+    fontFamily: "Rubik",
+    fontStyle: FontStyle.italic,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  );
 
   static const TextTheme _lightTextTheme = TextTheme(
     displayLarge: _lightHeadingText,
@@ -92,7 +94,6 @@ class AppTheme {
     ),
     textTheme: _lightTextTheme,
   );
-
 
   // *****************
   // Theme dark

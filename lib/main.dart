@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => ThemeService(),
-    child: const App(),
-  ));
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeService(),
+      child: const App(),
+    ),
+  );
 }
 
 class App extends StatelessWidget {
@@ -16,16 +18,14 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeService>(
-      builder: (context, themeService, child) {
-        return MaterialApp(
-          themeMode:
-              themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
-          home: AdvicerPage(),
-        );
-      },
-    );
+    return Consumer<ThemeService>(builder: (context, themeService, child) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        home: AdvicePage(),
+      );
+    });
   }
 }
